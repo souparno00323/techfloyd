@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title></title>
+ <link rel="stylesheet" type="text/css" href="style.css">
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+ <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+<section>
+ <h1 style="text-align: center;">WHAT DOES YOUR NAME SAY ABOUT YOUR PERSONALITY?</h1>
+        <!-- <p>  ﻿  </p> -->
+ <div class="centerDiv">
+  <div class="details">
+   <label>ENTER YOUR NAME</label><br>
+   <input type="text" name="" id="nameid">
+  </div>
+
+  <div class="imgdiv">
+   <img src="floyd.jpeg" width="200" height="200" class="imgchange">
+  </div>
+
+  <button> Click Me</button>
+  
+ </div>
+</section>
+<footer class="footer">
+    <p style="padding-bottom:10px;">Author: TechFloyds</p>
+    <p style="padding-bottom:5px;">© 2021 All rights reserved TechFloyds</p>
+  </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script>
+ $(document).ready(function(){
+  $('button').click(function(){
+   const name = $('#nameid').val();
+   alert(name);
+   $('.imgchange').attr('src',`https://joeschmoe.io/api/v1/random${name}`);
+   const b = $('.imgchange');
+   console.log(b);
+
+  });
+ });
+</script>
+
+</body>
+</html>
